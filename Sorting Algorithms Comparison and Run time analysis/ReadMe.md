@@ -2,7 +2,7 @@
 # 1. INSERTION SORT:
 Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-Algorithm: To sort an array of size n using Insertion Sort: 
+    Algorithm: To sort an array of size n using Insertion Sort: 
     1: Iterate from array[0] to array[n] over the array. 
     2: Compare the current element to its most recent left element. 
     3: If the current element is smaller than its immediate left element then compare it with the elements from left to 0. Move the greater elements one position to the right.
@@ -17,7 +17,7 @@ Uses: Insertion sort is used when number of elements is small. It can also be us
 # 2. MERGE SORT
 Merge sort is the sorting technique which based on the divide and conquer technique. Merge sort first divides the array into equal halves. Each sub array of size n/2 is sorted in a recursive manner in O(log(n)) time and then combines them in a sorted manner.
 
-Algorithm:
+    Algorithm:
     1: Find the middle point to divide the array into two halves
     2: Call merge Sort function for first half: Call merge Sort (array, 1, m)
     3: Call merge Sort for second half: Call merge Sort (array, m+1, r)
@@ -31,7 +31,7 @@ Uses: Merge Sort is useful for sorting linked lists in Ο(n*log(n)) time.
 # 3. HEAP SORT
 Heap sort is a comparison-based sorting technique whose structure is of Tree type. The tree is based on Binary heap data structure. This sorting technique is similar to selection sort where I first find the maximum element and place the maximum element at the end. I repeat the heapify process for remaining elements.
 
-Algorithm:
+    Algorithm:
     1: Build a max heap from the input data. 
     2: At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of the tree. 
     3: Repeat step 2 while size of heap is greater than 1.
@@ -44,7 +44,7 @@ Uses: Priority Queues, Order Statistics
 # 4. QUICK SORT
 Quicksort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quicksort that pick pivot in different ways such as Always picking first element as pivot, always pick last element as pivot, Pick a random element as pivot, Pick median as pivot. The key process in quicksort is partition (). Target of partitions is, given an array and an element x of array as pivot, put x at its correct position in sorted array and put all smaller elements (smaller than x) before x, and put all greater elements (greater than x) after x. All this should be done in linear time.
 
-Algorithm:
+    Algorithm:
     /* low --> Starting index, high --> Ending index */
     quicksort(array[], low, high){if (low < high) {/* pi is partitioning index, array[pi] is now at right place */ pi = partition(array, low, high); quicksort(array, low, pi - 1); // Before pi quicksort (array, pi + 1, high); // After pi}}
 
@@ -114,7 +114,7 @@ Insertion Sort, Merge Sort, Heap Sort, Quick Sort, Modified Quick Sort run times
     0.24802756309509277
     0.09374856948852539
     0.08000850677490234
-#40000
+# 40000
     79.38648629188538
     0.41416168212890625
     0.3279118537902832
@@ -127,8 +127,8 @@ Insertion Sort, Merge Sort, Heap Sort, Quick Sort, Modified Quick Sort run times
     0.16002917289733887
     0.15645718574523926
 
-Observations:
-• The quick sort algorithm running time depends on the selection of pivot in the given random data. If pivot is around the median value, less time is taken, or else algorithm takes more time.
-• In our case modified quick sort took more time as the size of the input increases.
-• Time taken by Insertion Sort also increased as the input size increases.
-• Time taken by Merge Sort and heap sort is less if the input is random data.
+# Observations:
+    • The quick sort algorithm running time depends on the selection of pivot in the given random data. If pivot is around the median value, less time is taken, or else algorithm takes more time.
+    • In our case modified quick sort took more time as the size of the input increases.
+    • Time taken by Insertion Sort also increased as the input size increases.
+    • Time taken by Merge Sort and heap sort is less if the input is random data.
